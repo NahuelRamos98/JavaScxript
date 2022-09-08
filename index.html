@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>TIMER</title>
+</head>
+<body>
+    <div class="contenedor-timer">
+        <div class="row-container contenedor-reloj">
+        <h2 id="reloj">25:00</h2>  
+        <div class="input-container">
+            <label for="ciclos-input">
+                Ciclos de productividad
+            </label>
+            <input id="ciclos-input" type="text" value="1">
+        </div>
+        </div>
+        <div class="row-container contenedor-comienzo">
+            <button id="start-button">start</button>
+        </div>
+        <div class="row-container contenedor-ajustes">
+            <div class="input-container">
+                <label for="tiempo de trabajo">Tiempo de trabajo</label>
+                <input id="work-time" type="text" value="25">
+            </div>
+            <div class="input-container">
+                <label for="tiempo de descando">Tiempo de descanso</label>
+                <input id="break-time" type="text" value="5">
+            </div>
+            <div class="input-container">
+                <label for="rest-time">reset</label>
+                <input id="rest-time" type="text" value="15">
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
