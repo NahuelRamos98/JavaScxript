@@ -80,9 +80,36 @@ function pomodoroController() {
     }
 }
 
-let marcas = {
-    diasEstudiados: 2,
-    recordDeDiasSeguidos: 4,
-    diasPactados: ['Lunes','Miercoles','Sabados'],
-    diasDeDescanso: ['Martes','Jueves']
-};
+let listaDeUsuarios = [{
+    nombre: "Nahuel",
+    edad: 24,
+    horasDeEstudio: 4,
+    diasDeEstudio: ["Lunes, Miercoles, Viernes"]
+},{
+    nombre: "Jorge",
+    edad: 20,
+    horasDeEstudio: 2,
+    diasDeEstudio: ["Lunes, Viernes"]
+},{
+    nombre: "Miguel",
+    edad: 31,
+    horasDeEstudio: 5,
+    diasDeEstudio: ["Lunes, Miercoles, Viernes"]
+},{
+    nombre: "Nicolas",
+    edad: 26,
+    horasDeEstudio: 1,
+    diasDeEstudio: ["Lunes, Miercoles, Viernes, Sabado"]
+}]
+
+localStorage.setItem("Usuarios",JSON.stringify(listaDeUsuarios))
+
+listaDeUsuarios = JSON.parse(localStorage.getItem("Usuarios"))
+
+listaDeUsuarios.forEach(element =>{
+    let elements = document.getElementById("usuRecientes");
+    let div = document.createElement("div");
+    div.classList.add("listadiv")
+    div.innerHTML ="Nombre: "+ element.nombre + "<br>Edad: "+ element.edad+ "<br>Horas de estudio: "+ element.horasDeEstudio + "<br>Dias de estudio: "+ element.diasDeEstudio;
+    elements.appendChild(div);
+})
